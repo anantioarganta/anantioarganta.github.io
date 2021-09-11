@@ -38,7 +38,19 @@
                 
               </ul>
               <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<ul id="myUL">
+  <li><a href="page6.html">Kemerdekaan</a></li>
+  <li><a href="page2.html">Bagus ni!!</a></li>
+
+  <li><a href="page3.html">Bolpen</a></li>
+  <li><a href="page4.html">Keseharian</a></li>
+  <li><a href="page5.html">Technology</a></li>
+  
+
+ 
+</ul> 
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
             </div>
@@ -107,6 +119,27 @@ nav ul div a {
   color: black;
 }
     </style>
+    <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
         <div class="container">
           <h1 class="display-4">Hello Everyone</h1>
           <p class="lead">Halo Semua Perkenalkan nama saya Arganta. Sebagai Seorang Penulis web Kegiatan saya sehari hari adalah meulis tulisan di berbagai web saya. Salah satunya adalah web ini. Disini saya menulis berbagai hal dasar tentang otomotif. terutama mobil. Contoh saja penjelasan tentang jenis konfigurasi mesin, dll. Selain sebagai pekerjaan, menulis adalah hobi saya. Dulu saya hobi menulis cerpen. Berhubung saya meiliki ketertarikan dengan otomotif, saya memutuskan untuk memuat web yang full saya buat sendiri. Mulai dari codingan hingga Content itu sendiri. Saya harap Anda menikmati content yang sudah saya buat. Sekian Terimakasih</p>
